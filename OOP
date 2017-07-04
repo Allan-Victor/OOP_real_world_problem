@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jul  4 14:51:59 2017
+
+@author: VICTOR
+"""
+
+class Agricularist:
+    #Represents any person doing carrying out agriculture
+    def _init_(self,name,age):
+        self.name=name
+        self.age=age
+       
+        
+    def personal_info(self):
+        #agricularist personal info
+         print ('Name:  Age: '.format(self.name, self.age))
+         
+class farmer(Agricularist):
+     #represents a coffee grower agricularist
+      def __init__(self, name, age, challenge_faced):
+       # super().__init__(self, name, age)
+        self.name=name
+        self.age=age
+        self.challenge_faced = challenge_faced
+        print ('farmer: '.format )
+        
+      def problem(self):
+        Agricularist.personal_info(self)
+        print ('challenge_faced: '.format(self.challenge_faced))
+class Agric_specialist(Agricularist):
+#Represents person specialised in treating crop diseases
+      def __init__(self, name, age, cost_for_service):
+        #super().__init__(self, name, age)
+        self.name=name
+        self.age=age
+        self.cost_for_service = cost_for_service  
+        print ('Agric_specialist: '.format)
+         
+      def cost(self):
+        Agric_specialist.personal_info(self)
+        print ('cost_for_service: '.format(self.cost_for_service))
+        
+        
+fa= farmer('Mr.Kigudde', 40, 'army worm is eating all the maize')
+sp= Agric_specialist('Mr.Mubiru', 30, '75000/=')
+print
+Members = [fa, sp]
+for member in Members:
+    member.personal_info()
+    
+         
+ 
+
+ 
+        
